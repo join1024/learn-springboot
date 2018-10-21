@@ -1,16 +1,29 @@
-package com.learn.springboot;
+package com.learn.springboot.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+/**
+ * 通过@ConfigurationProperties注解获取属性
+ */
 @Component
 @ConfigurationProperties(prefix = "learn.jdbc")
-public class JdbcProperties {
+public class ConfigurationJdbcProperties {
+
     private String ip;
     private String port;
     private List<String> hosts;
+
+    @Override
+    public String toString() {
+        return "JdbcProperties{" +
+                "ip='" + ip + '\'' +
+                ", port='" + port + '\'' +
+                ", hosts=" + hosts +
+                '}';
+    }
 
     public String getIp() {
         return ip;
@@ -36,12 +49,5 @@ public class JdbcProperties {
         this.hosts = hosts;
     }
 
-    @Override
-    public String toString() {
-        return "JdbcProperties{" +
-                "ip='" + ip + '\'' +
-                ", port='" + port + '\'' +
-                ", hosts=" + hosts +
-                '}';
-    }
+
 }
