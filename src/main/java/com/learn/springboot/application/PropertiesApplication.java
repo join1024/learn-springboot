@@ -18,8 +18,8 @@ import javax.annotation.PostConstruct;
 /**只有启动了EnableAutoConfiguration，注解读取属性的@ConfigurationProperties才会生效*/
 @EnableAutoConfiguration
 /**指定配置文件路径，没有指定则用默认的：application.properties*/
-@PropertySource("app.properties")
-@ComponentScan(basePackages="com.learn.springboot")
+@PropertySource("application.properties")
+@ComponentScan(basePackages="com.learn.springboot",excludeFilters = {@ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,classes = {LearnSpringApplication.class})})
 public class PropertiesApplication {
 
     @Autowired

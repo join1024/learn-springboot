@@ -1,4 +1,4 @@
-package com.learn.springboot.config;
+package com.learn.springboot.profile;
 
 /**
  * @author Join 2018-10-23

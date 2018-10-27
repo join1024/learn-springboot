@@ -1,4 +1,4 @@
-package com.learn.springboot.config;
+package com.learn.springboot.profile;
 
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Profile;
  * @author Join 2018-10-23
  */
 @SpringBootConfiguration
-public class MyConfiguration {
+public class MyProfileConfiguration {
 
     @Bean
     public MyBean startMyBean(){
