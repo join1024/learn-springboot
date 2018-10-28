@@ -1,6 +1,7 @@
 package com.learn.springboot.enablexxx.annotation;
 
-import com.learn.springboot.enablexxx.bean.MyUser;
+import com.learn.springboot.enablexxx.model.MyUser1;
+import com.learn.springboot.enablexxx.model.MyUser2;
 import com.learn.springboot.enablexxx.selector.MyUserImportSelector;
 import org.springframework.context.annotation.Import;
 
