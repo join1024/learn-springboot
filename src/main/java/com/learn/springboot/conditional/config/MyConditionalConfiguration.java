@@ -1,4 +1,4 @@
-package com.learn.springboot.conditional;
+package com.learn.springboot.conditional.config;
 
 import com.learn.springboot.conditional.condition.ActivitiCondition;
 import com.learn.springboot.conditional.condition.FreemarkerCondition;

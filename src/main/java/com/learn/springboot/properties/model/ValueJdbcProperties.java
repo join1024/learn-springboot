@@ -1,4 +1,4 @@
-package com.learn.springboot.properties;
+package com.learn.springboot.properties.model;
 
 import com.learn.springboot.utils.CommonUtils;
 import org.springframework.beans.factory.annotation.Value;

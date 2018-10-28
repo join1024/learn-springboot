@@ -1,4 +1,4 @@
-package com.learn.springboot.properties;
+package com.learn.springboot.profile.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import java.util.List;
  */
 @Component
 @ConfigurationProperties(prefix = "learn.jdbc")
-public class ConfigurationJdbcProperties {
+public class ProfileJdbcProperties {
 
     private String ip;
     private String port;

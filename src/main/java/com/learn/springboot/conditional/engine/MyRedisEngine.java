@@ -14,7 +14,7 @@ import javax.annotation.PostConstruct;
 //不通过@Bean来创建了，则要记得配合@Component使用
 @Component
 //条件装配直接作用在类上
-@Conditional(RedisCondition.class))
+@Conditional(RedisCondition.class)
 public class MyRedisEngine {
     //TODO 此处加载Redis存储引擎相关代码
 

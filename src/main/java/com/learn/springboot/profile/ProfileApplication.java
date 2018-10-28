@@ -1,12 +1,11 @@
-package com.learn.springboot.application;
+package com.learn.springboot.profile;
 
-import com.learn.springboot.profile.MyBean;
-import com.learn.springboot.properties.ConfigurationJdbcProperties;
+import com.learn.springboot.profile.model.MyBean;
+import com.learn.springboot.profile.model.ProfileJdbcProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.FilterType;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
@@ -14,27 +13,27 @@ import java.util.List;
 
 //@SpringBootApplication
 
-
 /**只有启动了EnableAutoConfiguration，注解读取属性的@ConfigurationProperties才会生效
  * @author Join*/
 @EnableAutoConfiguration
 /**指定配置文件路径，没有指定则用默认的：application.properties*/
 //@PropertySource("application.properties")
-@ComponentScan(basePackages="com.learn.springboot",excludeFilters = {@ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,classes = {LearnSpringApplication.class})})
+@ComponentScan(basePackages="com.learn.springboot.profile")
 public class ProfileApplication {
 
     @Autowired
     List<MyBean> myBeanList;
 
     @Autowired
-    ConfigurationJdbcProperties jdbcProperties;
+    ProfileJdbcProperties jdbcProperties;
 
 
     public static void main(String[] args) {
         SpringApplication app=new SpringApplication(ProfileApplication.class);
 
         //通过内置函数指定profile，如果有多个且包含相同的属性名，则用后面的覆盖前面的值
-        app.setAdditionalProfiles("test","dev");
+        //app.setAdditionalProfiles("test","dev");
+        app.setAdditionalProfiles("test");
         app.run(args);
 
         //通过启动参数参数指定profile，如果是jar包，则在jar包启动时指定参数

@@ -1,4 +1,4 @@
-package com.learn.springboot.properties;
+package com.learn.springboot.properties.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;

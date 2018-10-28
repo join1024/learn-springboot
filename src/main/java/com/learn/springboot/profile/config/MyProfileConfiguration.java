@@ -1,5 +1,6 @@
-package com.learn.springboot.profile;
+package com.learn.springboot.profile.config;
 
+import com.learn.springboot.profile.model.MyBean;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;

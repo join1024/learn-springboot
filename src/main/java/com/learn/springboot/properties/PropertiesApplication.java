@@ -1,9 +1,10 @@
-package com.learn.springboot.application;
+package com.learn.springboot.properties;
 
-import com.learn.springboot.properties.ConfigurationJdbcProperties;
-import com.learn.springboot.properties.EnvironmentJdbcProperties;
-import com.learn.springboot.properties.TestProperties;
-import com.learn.springboot.properties.ValueJdbcProperties;
+import com.learn.springboot.properties.model.ConfigurationJdbcProperties;
+import com.learn.springboot.properties.model.EnvironmentJdbcProperties;
+import com.learn.springboot.properties.model.TestProperties;
+import com.learn.springboot.properties.model.ValueJdbcProperties;
+import com.learn.springboot.start.LearnSpringApplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -17,9 +18,13 @@ import javax.annotation.PostConstruct;
 //@SpringBootApplication
 /**只有启动了EnableAutoConfiguration，注解读取属性的@ConfigurationProperties才会生效*/
 @EnableAutoConfiguration
-/**指定配置文件路径，没有指定则用默认的：application.properties*/
+/**指定配置文件路径，没有指定则用默认的：start.properties*/
 @PropertySource("application.properties")
-@ComponentScan(basePackages="com.learn.springboot",excludeFilters = {@ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,classes = {LearnSpringApplication.class})})
+/*@ComponentScan(basePackages="com.learn.springboot.properties"
+        ,excludeFilters = {
+            @ComponentScan.Filter(type= FilterType.ASSIGNABLE_TYPE,classes = {
+                    LearnSpringApplication.class})})*/
+@ComponentScan(basePackages="com.learn.springboot.properties")
 public class PropertiesApplication {
 
     @Autowired

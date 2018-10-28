@@ -1,4 +1,4 @@
-package com.learn.springboot.application;
+package com.learn.springboot.start;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

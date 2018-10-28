@@ -1,13 +1,7 @@
-package com.learn.springboot.application;
+package com.learn.springboot.start;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.PropertySource;
-
-import javax.annotation.PostConstruct;
 
 //@SpringBootApplication
 //@EnableAutoConfiguration
